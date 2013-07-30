@@ -20,13 +20,13 @@ sudo apt-get install -y git
 sudo apt-get install -y curl
 
 # Install nginx and php
-sudo apt-get install nginx php5-fpm
+sudo apt-get install -y nginx php5-fpm
 
 # Move the laravel.conf file to the nginx sites-enabled directory 
 sudo mv ~/laravel.conf /etc/nginx/sites-enabled/sitename.com
 
 # Install mysql
-sudo apt-get install mysql-server php5-mysql
+sudo apt-get install -y mysql-server php5-mysql
 sudo mysql_secure_installation
 
 # Make the main site directory and logs subdirectory
@@ -39,9 +39,8 @@ sudo /etc/init.d/nginx restart
 
 # Install emacs
 sudo add-apt-repository ppa:cassou/emacs
-sudo apt-get update
-sudo apt-get install emacs-snapshot
-emacs-snapshot
+sudo apt-get update -y
+sudo apt-get install -y emacs-snapshot
 
 # Install composer and then use composer to install all dependencies
 sudo curl -s http://getcomposer.org/installer | php
