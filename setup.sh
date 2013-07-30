@@ -34,7 +34,7 @@ sudo git clone git://github.com/BenBradley/Laravel-4-Bootstrap.git sitename
 sudo mkdir sitename/logs
 
 # Symbollically link the site directory to enable the site and then restart the server
-sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled
+sudo ln -s /etc/nginx/sites-available/sitename.com /etc/nginx/sites-enabled
 sudo /etc/init.d/nginx restart
 
 # Install emacs
