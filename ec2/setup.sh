@@ -11,8 +11,8 @@ sudo chmod 644 /etc/hostname
 sudo hostname -F /etc/hostname
 
 # Update and upgrade packages using apt-get
-sudo apt-get update
-sudo apt-get upgrade --show-upgraded
+sudo apt-get update -y
+sudo apt-get upgrade -y --show-upgraded
 
 # Install git and curl 
 sudo apt-get install -y git-core
