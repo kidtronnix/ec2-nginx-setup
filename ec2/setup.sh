@@ -20,7 +20,7 @@ sudo apt-get install -y git
 sudo apt-get install -y curl
 
 # Install nginx and php
-sudo apt-get install -y nginx php5-fpm php5-cli
+sudo apt-get install -y nginx php5-fpm php5-cli php5-mcrypt
 
 # Move the laravel.conf file to the nginx sites-enabled directory 
 sudo mv ~/laravel.conf /etc/nginx/sites-enabled/sitename.com
@@ -60,3 +60,5 @@ sudo php artisan key:generate
 
 # Build assets using bassett
 sudo php artisan basset:build
+
+cd ~
