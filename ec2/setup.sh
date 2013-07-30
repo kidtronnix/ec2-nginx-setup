@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Change the host name, replace ip and host name with correct information
 sudo chmod 777 /etc/hosts
 sudo echo "ipaddress Hydrogen" >> /etc/hosts
