@@ -1,16 +1,12 @@
 # Change the host name, replace ip and host name with correct information
 sudo chmod 777 /etc/hosts
-sudo echo "ipaddress hostnameholder" >> /etc/hosts
+sudo echo "ipaddress Hydrogen" >> /etc/hosts
 sudo chmod 644 /etc/hosts
 
 sudo chmod 777 /etc/hostname
-sudo echo "hostnameholder" > /etc/hostname
+sudo echo "Hydrogen" > /etc/hostname
 sudo chmod 644 /etc/hostname
 sudo hostname -F /etc/hostname
-
-# Change the timezone
-sudo cp /etc/localtime /etc/localtime-old
-sudo ln -sf /usr/share/zoneinfo/Europe/London localtime
 
 # Update and upgrade packages using apt-get
 sudo apt-get update
