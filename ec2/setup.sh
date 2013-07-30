@@ -20,7 +20,7 @@ sudo apt-get install -y git
 sudo apt-get install -y curl
 
 # Install nginx and php
-sudo apt-get install -y nginx php5-fpm
+sudo apt-get install -y nginx php5-fpm php5-cli
 
 # Move the laravel.conf file to the nginx sites-enabled directory 
 sudo mv ~/laravel.conf /etc/nginx/sites-enabled/sitename.com
