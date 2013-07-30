@@ -23,7 +23,7 @@ sudo apt-get install -y curl
 sudo apt-get install -y nginx php5-fpm php5-cli php5-mcrypt
 
 # Move the laravel.conf file to the nginx sites-enabled directory 
-sudo mv ~/laravel.conf /etc/nginx/sites-enabled/sitename.com
+sudo mv ~/laravel.conf /etc/nginx/sites-available/sitename.com
 
 # Install mysql
 sudo apt-get install -y mysql-server php5-mysql
@@ -62,3 +62,4 @@ sudo php artisan key:generate
 sudo php artisan basset:build
 
 cd ~
+sudo /etc/init.d/nginx restart
