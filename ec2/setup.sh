@@ -38,8 +38,8 @@ sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled
 sudo /etc/init.d/nginx restart
 
 # Install emacs
-sudo add-apt-repository ppa:cassou/emacs
-sudo apt-get update -y
+sudo add-apt-repository -y ppa:cassou/emacs
+sudo apt-get update
 sudo apt-get install -y emacs-snapshot
 
 # Install composer and then use composer to install all dependencies
