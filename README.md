@@ -1,10 +1,9 @@
-
 sudo apt-get install -y git-core
 
 sudo git clone https://github.com/BenBradley/ec2-nginx-setup
 
 
-sudo mv ec2-nginx-setup/ec2/* .
+sudo mv ec2-nginx-setup/* .
 
 sudo rm -rf ec2-nginx-setup/
 
