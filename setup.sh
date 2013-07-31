@@ -25,9 +25,10 @@ sudo apt-get install -y nginx php5-fpm php5-cli php5-mcrypt
 # Move the laravel.conf file to the nginx sites-enabled directory 
 sudo mv ~/laravel.conf /etc/nginx/sites-available/sitename.com
 
-# Install mysql
+# Install mysql and php-mysql
 sudo apt-get install -y mysql-server php5-mysql
 sudo mysql_secure_installation
+sudo service php5-fpm restart
 
 # Make the main site directory and logs subdirectory
 sudo git clone git://github.com/BenBradley/Laravel-4-Bootstrap.git sitename
@@ -41,6 +42,9 @@ sudo /etc/init.d/nginx restart
 sudo add-apt-repository -y ppa:cassou/emacs
 sudo apt-get update
 sudo apt-get install -y emacs-snapshot
+
+# Change permissions on the main site directory
+sudo chmod -R 755 sitename
 
 # Install composer and then use composer to install all dependencies
 sudo curl -s http://getcomposer.org/installer | php
@@ -63,3 +67,4 @@ sudo php artisan basset:build
 
 cd ~
 sudo /etc/init.d/nginx restart
+
