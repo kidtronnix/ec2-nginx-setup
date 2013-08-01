@@ -25,6 +25,10 @@ sudo apt-get install -y nginx php5-fpm php5-cli php5-mcrypt
 # Move the laravel.conf file to the nginx sites-enabled directory 
 sudo mv ~/laravel.conf /etc/nginx/sites-available/sitename.com
 
+# Remove the default www.conf file and move in the replacement file included
+sudo rm /etc/php5/fpm/pool.d/www.conf
+sudo mv www.conf /etc/php5/fpm/pool.d
+
 # Install mysql and php-mysql
 sudo apt-get install -y mysql-server php5-mysql
 sudo mysql_secure_installation
