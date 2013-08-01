@@ -87,6 +87,8 @@ The shell script will set up the nginx server and a configuration file for your 
     
 Update the mysql array with your database name (The site name you picked at the begginging of the setup) and your database password.
 
+-----
+
 ### View your new site
 
 Navigate to your servers ip address in your browser and you should see the basic Laravel/Bootstrap template site. Happy coding.
