@@ -38,8 +38,12 @@ sudo service php5-fpm restart
 sudo git clone git://github.com/BenBradley/Laravel-4-Bootstrap.git sitename
 sudo mkdir sitename/logs
 
-# Symbollically link the site directory to enable the site and then restart the server
+# Symbollically link the site directory to enable the site
 sudo ln -s /etc/nginx/sites-available/sitename.com /etc/nginx/sites-enabled
+
+# Remove the default site config from sites-available and sites-enabled and then restart the server
+sudo rm /etc/nginx/sites-available/default
+sudo rm /etc/nginx/sites-enabled/default
 sudo /etc/init.d/nginx restart
 
 # Install emacs
@@ -60,14 +64,14 @@ sudo composer install --dev
 # Set up database
 sudo mysqladmin -u root -p create sitename
 
-# Change permissions on the app/storage directory
-sudo chmod -R 777 app/storage
-
 # Set encryption key
 sudo php artisan key:generate
 
 # Build assets using bassett
 sudo php artisan basset:build
+
+# Change permissions on the app/storage directory
+sudo chmod -R 777 app/storage
 
 cd ~
 sudo /etc/init.d/nginx restart
