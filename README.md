@@ -65,7 +65,7 @@ php5-cli
 
 php5-mcrypt
 
-mysql-server
+mysql-server - Also creates a database called the same as your site
 
 php5-mysql
 
@@ -83,8 +83,9 @@ The shell script will set up the nginx server and a configuration file for your 
 
 ### Update Laravels database configuration file using your text editor of choice
 
-    sudo nano app/config/
-
+    sudo nano app/config/database.php
+    
+Update the mysql array with your database name (The site name you picked at the begginging of the setup) and your database password.
 
 ### View your new site
 
