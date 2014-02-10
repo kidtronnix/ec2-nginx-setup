@@ -35,7 +35,7 @@ sudo mysql_secure_installation
 sudo service php5-fpm restart
 
 # Make the main site directory and logs subdirectory
-sudo git clone https://github.com/andrew13/Laravel-4-Bootstrap-Starter-Site.git sitename
+sudo git clone githolder
 sudo mkdir sitename/logs
 
 # Symbollically link the site directory to enable the site
