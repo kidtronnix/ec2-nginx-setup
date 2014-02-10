@@ -23,7 +23,7 @@ sudo apt-get install -y curl
 sudo apt-get install -y nginx php5-fpm php5-cli php5-mcrypt
 
 # Move the laravel.conf file to the nginx sites-enabled directory 
-sudo mv ~/laravel.conf /etc/nginx/sites-available/sitename.com
+sudo mv ~/codeigniter.conf /etc/nginx/sites-available/sitename.com
 
 # Remove the default www.conf file and move in the replacement file included
 sudo rm /etc/php5/fpm/pool.d/www.conf
@@ -62,16 +62,9 @@ cd sitename
 sudo composer install --dev
 
 # Set up database
+echo 'Creating DB...'
 sudo mysqladmin -u root -p create sitename
-
-# Set encryption key
-sudo php artisan key:generate
-
-# Build assets using bassett
-sudo php artisan basset:build
-
-# Change permissions on the app/storage directory
-sudo chmod -R 777 app/storage
+sudo mysql -u root -p sitename < db.sql
 
 cd ~
 sudo /etc/init.d/nginx restart
