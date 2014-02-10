@@ -35,7 +35,7 @@ sudo mysql_secure_installation
 sudo service php5-fpm restart
 
 # Make the main site directory and logs subdirectory
-sudo git clone githolder
+sudo git clone githolder sitename
 sudo mkdir sitename/logs
 
 # Symbollically link the site directory to enable the site
