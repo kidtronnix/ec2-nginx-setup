@@ -54,12 +54,7 @@ sudo apt-get install -y emacs-snapshot
 # Change permissions on the main site directory
 sudo chmod -R 755 sitename
 
-# Install composer and then use composer to install all dependencies
-sudo curl -s http://getcomposer.org/installer | php
-sudo mv composer.phar /usr/local/bin/composer
-
 cd sitename
-sudo composer install --dev
 
 # Set up database
 echo 'Creating DB...'
